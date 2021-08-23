@@ -1,0 +1,36 @@
+//
+// Name: Notify
+//
+// Description:
+//
+// ========================================
+
+
+// Variables
+// ========================================
+@notify-z-index: @global-z-index+40;
+
+/**
+	16px/18px
+*/
+@notify-message-font-size: round((@global-font-size*1.14));
+
+/**
+	22px/24px
+*/
+@notify-message-line-height: round((@notify-message-font-size*1.36));
+
+
+/* Component:
+ ======================================== */
+.hook-notify(){}
+.hook-notify-message(){}
+.hook-notify-message-primary(){}
+.hook-notify-message-success(){}
+.hook-notify-message-warning(){}
+.hook-notify-message-danger(){}
+
+
+// Hooks
+// ========================================
+.hook-notify-misc(){}

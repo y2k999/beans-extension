@@ -1,0 +1,39 @@
+//
+// Name: Block
+//
+// Description:
+//
+// ========================================
+
+
+// Variables
+// ========================================
+@block-default-background: @global-background;
+
+
+/* Component:
+ ======================================== */
+.hook-block(){}
+
+
+/* Modifier: Color
+ ======================================== */
+.hook-block-default(){}
+.hook-block-muted(){}
+.hook-block-secondary(){}
+.hook-block-primary(){}
+
+
+// Hooks
+// ========================================
+.hook-block-misc(){
+	/**
+		Adjust padding between equal colored blocks
+	*/
+	.uk-block-default+.uk-block-default,
+	.uk-block-muted+.uk-block-muted,
+	.uk-block-primary+.uk-block-primary,
+	.uk-block-secondary+.uk-block-secondary{
+		padding-top: 0;
+	}
+}

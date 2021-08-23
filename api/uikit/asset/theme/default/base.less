@@ -1,0 +1,162 @@
+//
+// Name: Base
+//
+// Description:
+//
+// ========================================
+
+
+// Variables
+// ========================================
+@base-body-background: @global-background;
+@base-body-font-size: @global-font-size;
+@base-body-line-height: @global-line-height;
+@base-body-color: @global-color;
+
+@base-link-color: @global-link-color;
+@base-link-hover-color: @global-link-hover-color;
+@base-ins-color: @global-color;
+@base-mark-color: @global-color;
+
+@base-margin-vertical: @global-margin;
+
+@base-heading-color: @global-color;
+@base-heading-margin-top: @global-margin-large;
+
+/**
+	36px/42px
+*/
+@base-h1-font-size: round((@global-font-size*2.6));
+
+/**
+	42px/48px
+*/
+@base-h1-line-height: round((@base-h1-font-size*1.154));
+
+/**
+	24px/28px
+*/
+@base-h2-font-size: round((@global-font-size*1.74));
+
+/**
+	30px/36px
+*/
+@base-h2-line-height: round((@base-h2-font-size*1.27));
+
+/**
+	18px/20px
+*/
+@base-h3-font-size: round((@global-font-size*1.28));
+
+/**
+	24px/26px
+*/
+@base-h3-line-height: round((@base-h3-font-size*1.32));
+
+/**
+	16px/18px
+*/
+@base-h4-font-size: round((@global-font-size*1.14));
+
+/**
+	22px/24px
+*/
+@base-h4-line-height: round((@base-h4-font-size*1.36));
+
+/**
+	14px/16px
+*/
+@base-h5-font-size: @global-font-size;
+
+/**
+	20px/22px
+*/
+@base-h5-line-height: @global-line-height;
+
+/**
+	12px/14px
+*/
+@base-h6-font-size: round((@global-font-size*0.85));
+
+/**
+	18px/20px
+*/
+@base-h6-line-height: round((@base-h6-font-size*1.46));
+
+@base-hr-border: @global-border;
+
+@base-blockquote-border: @global-border;
+
+/**
+	16px/18px
+*/
+@base-blockquote-font-size: round((@global-font-size*1.14));
+
+/**
+	22px/24px
+*/
+@base-blockquote-line-height: round((@base-blockquote-font-size*1.36));
+
+/**
+	12px/14px
+*/
+@base-code-font-size: round((@global-font-size*0.85));
+@base-pre-color: @global-color;
+
+/**
+	12px/14px
+*/
+@base-pre-font-size: round((@global-font-size*0.85));
+
+/**
+	18px/20px
+*/
+@base-pre-line-height: round((@base-pre-font-size*1.46));
+
+
+/* Component: Body
+ ======================================== */
+.hook-base-body(){}
+
+
+/* Component: Links
+ ======================================== */
+.hook-base-link(){}
+.hook-base-link-hover(){}
+
+
+/**
+	ext-level semantics
+*/
+.hook-base-code(){}
+
+
+/* Component: Headings
+ ======================================== */
+.hook-base-h(){}
+.hook-base-h1(){}
+.hook-base-h2(){}
+.hook-base-h3(){}
+.hook-base-h4(){}
+.hook-base-h5(){}
+.hook-base-h6(){}
+
+
+/* Component: Horizontal rules
+ ======================================== */
+.hook-base-hr(){}
+
+
+/* Component: Blockquotes
+ ======================================== */
+.hook-base-blockquote(){}
+
+
+/* Component: Preformatted text
+ ======================================== */
+.hook-base-pre(){}
+
+
+// Hooks
+// ========================================
+.hook-base-misc(){}

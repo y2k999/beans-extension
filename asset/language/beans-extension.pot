@@ -1,0 +1,683 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Beans Extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-09 07:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8\n"
+"X-Domain: beans-extension"
+
+#: admin/tab/data/section/general.php:45
+msgid ", and Beans Accessibility function "
+msgstr ""
+
+#: admin/tab/data/setting/column/post.php:61
+msgid "Activate Post view count ?"
+msgstr ""
+
+#: api/field/view/image.php:85
+msgid "Add Image"
+msgid_plural "Add Images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: api/compiler/config/compiler.php:60
+msgid "Aggressive"
+msgstr ""
+
+#: admin/tab/data/section/layout.php:44
+msgid "Archive pages layout"
+msgstr ""
+
+#: admin/tab/data/setting/image/picture.php:41
+msgid "Author"
+msgstr ""
+
+#: admin/tab/data/section/image.php:41
+msgid ""
+"Automatically generate featured image from the first attachment in post or "
+"registerd categories."
+msgstr ""
+
+#: admin/tab/data/setting/image/configuration.php:40
+msgid "Autosave thumbnail"
+msgstr ""
+
+#: admin/tab/data/setting/image/avatar.php:41
+msgid "Avatar No.1"
+msgstr ""
+
+#: admin/tab/data/setting/image/avatar.php:48
+msgid "Avatar No.2"
+msgstr ""
+
+#: admin/tab/data/setting/image/avatar.php:55
+msgid "Avatar No.3"
+msgstr ""
+
+#: admin/tab/data/section/image.php:48
+msgid "Avatars"
+msgstr ""
+
+#: admin/beans.php:127
+msgid "Beans Api"
+msgstr ""
+
+#: admin/tab/data/section/general.php:40
+msgid "Beans API Components"
+msgstr ""
+
+#: admin/tab/data/section/general.php:44
+msgid "Beans default Modules"
+msgstr ""
+
+#. Name of the plugin
+msgid "Beans Extension"
+msgstr ""
+
+#: admin/beans.php:501
+msgid "Beans Logo"
+msgstr ""
+
+#: admin/tab/data/section/general.php:48
+msgid "Beans Template Directories"
+msgstr ""
+
+#: admin/beans.php:515
+msgid "Branding"
+msgstr ""
+
+#: api/compiler/view/notice-flushed.php:33
+msgid "Cache flushed successfully!"
+msgstr ""
+
+#: admin/tab/data/section/general.php:41
+msgid "Check here, if you don't want to use "
+msgstr ""
+
+#: admin/tab/data/section/general.php:45
+msgid "Check here, if you want to use Beans default 6 layouts "
+msgstr ""
+
+#: api/compiler/config/compiler.php:57
+msgid "Choose the level of compilation."
+msgstr ""
+
+#: api/image/config/image.php:33
+msgid "Clear all edited images. New images will be created on page load."
+msgstr ""
+
+#: api/compiler/config/compiler.php:33
+msgid ""
+"Clear CSS and Javascript cached files. New cached versions will be compiled "
+"on page load."
+msgstr ""
+
+#: admin/beans.php:128
+msgid "Column"
+msgstr ""
+
+#: api/compiler/config/compiler.php:45
+msgid "Compile all WordPress scripts"
+msgstr ""
+
+#: api/compiler/config/compiler.php:37
+msgid "Compile all WordPress styles"
+msgstr ""
+
+#: api/compiler/config/compiler.php:41
+msgid ""
+"Compile and cache all the CSS files that have been enqueued to the WordPress "
+"head."
+msgstr ""
+
+#: api/compiler/config/compiler.php:65
+msgid ""
+"Compile and cache all the JavaScript files that have been enqueued to the "
+"WordPress head. <br/> JavaScript is outputted in the footer if the level is "
+"set to <strong>Aggressive</strong> and might conflict with some third-party "
+"plugins which are not following WordPress standards."
+msgstr ""
+
+#: api/compiler/control.php:171
+msgid "Compiler Option"
+msgstr ""
+
+#: admin/tab/data/section/column.php:45
+msgid "Configurate Admin Pages Column. ex) page template, slug etc."
+msgstr ""
+
+#: admin/tab/data/section/column.php:41
+msgid ""
+"Configurate Admin Posts Column. ex. thumbnail, word counts, post views etc."
+msgstr ""
+
+#: admin/tab/data/section/column.php:49
+msgid "Configurate Admin User Profile. ex) your sns account url."
+msgstr ""
+
+#: api/compiler/runtime.php:1026
+msgid "Contact Beans Support"
+msgstr ""
+
+#: api/layout/beans.php:121 api/layout/beans.php:155
+msgid "Content and Primary Sidebar Layout"
+msgstr ""
+
+#: api/layout/beans.php:131
+msgid "Content,Primary Sidebar and Secondary Sidebar Layout"
+msgstr ""
+
+#: admin/tab/backup.php:210
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: admin/beans.php:530 admin/beans.php:551
+msgid "Default Layout"
+msgstr ""
+
+#: api/field/view/image.php:121
+msgid "Delete Image"
+msgstr ""
+
+#: api/field/view/image.php:120
+msgid "Edit Image"
+msgstr ""
+
+#: api/field/view/checkbox.php:61
+msgid "Enable"
+msgstr ""
+
+#: admin/beans.php:341
+msgid "Enable development mode"
+msgstr ""
+
+#: admin/beans.php:573
+msgid "Enable to change the viewport height."
+msgstr ""
+
+#: admin/beans.php:558
+msgid "Enable to change the viewport width."
+msgstr ""
+
+#: admin/beans.php:131
+msgid "Export"
+msgstr ""
+
+#: admin/tab/backup.php:190
+msgid "Export your get_option() Settings."
+msgstr ""
+
+#: admin/tab/data/section/image.php:44
+msgid "Featured Images"
+msgstr ""
+
+#: api/compiler/view/button-flush.php:32
+msgid "Flush assets cache"
+msgstr ""
+
+#: api/image/view/button-flush.php:32
+msgid "Flush Images"
+msgstr ""
+
+#: admin/tab/data/setting/general/path.php:54
+msgid "Fragment file path (BEANS_FRAGMENTS_PATH)."
+msgstr ""
+
+#: api/layout/beans.php:116 api/layout/beans.php:150
+msgid "Full-Width Content Layout"
+msgstr ""
+
+#: api/widget/beans.php:203 api/widget/beans.php:761
+msgid "Hello"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/thatwpdeveloper"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wpbeansframework.com/"
+msgstr ""
+
+#: admin/tab/app/column.php:360 admin/tab/app/column.php:665
+#: admin/tab/data/setting/column/page.php:40
+#: admin/tab/data/setting/column/post.php:40
+msgid "ID"
+msgstr ""
+
+#: admin/tab/data/section/general.php:53
+msgid ""
+"If you want to use Uikit3, select \"<strong>Load only normalize.css</strong>"
+"\" option and check \"<strong>Uikit3 CDN</strong>\"."
+msgstr ""
+
+#: admin/beans.php:129
+msgid "Image"
+msgstr ""
+
+#: api/image/control.php:171
+msgid "Image Option"
+msgstr ""
+
+#: admin/tab/data/section/image.php:40
+msgid "Image Settings"
+msgstr ""
+
+#: api/image/view/notice-flushed.php:33
+msgid "Images flushed successfully!"
+msgstr ""
+
+#: admin/tab/backup.php:157
+msgid "Import your get_option() Settings."
+msgstr ""
+
+#: admin/tab/backup.php:114
+msgid "Imported Successfully!"
+msgstr ""
+
+#: admin/beans.php:130
+msgid "Layout"
+msgstr ""
+
+#: admin/tab/data/setting/layout/archive.php:47
+msgid "Layout for archive page(archive.php)"
+msgstr ""
+
+#: admin/tab/data/setting/layout/archive.php:40
+msgid "Layout for blog page(home.php)"
+msgstr ""
+
+#: admin/tab/data/setting/layout/singular.php:47
+msgid "Layout for single pages(page.php)"
+msgstr ""
+
+#: admin/tab/data/setting/layout/singular.php:40
+msgid "Layout for single posts(single.php)"
+msgstr ""
+
+#: api/field/view/image.php:118
+msgid "Manage Images"
+msgstr ""
+
+#: admin/tab/data/setting/image/configuration.php:47
+msgid "Max number of categoriesl"
+msgstr ""
+
+#: admin/tab/data/section/image.php:52
+msgid "Miscellaneous"
+msgstr ""
+
+#: admin/beans.php:358
+msgid "Mode Option"
+msgstr ""
+
+#: api/field/view/field.php:110
+msgid "More..."
+msgstr ""
+
+#: admin/tab/backup.php:118
+msgid "No data or Invalid data!"
+msgstr ""
+
+#: admin/tab/app/column.php:510 admin/tab/app/column.php:813
+msgid "No Image."
+msgstr ""
+
+#: api/compiler/runtime.php:1016
+msgid "Not cool,Beans cannot work its magic :("
+msgstr ""
+
+#: admin/tab/data/setting/image/picture.php:48
+msgid "Not Found"
+msgstr ""
+
+#: admin/tab/backup.php:194
+msgid ""
+"Note:Images like Logo and Thumbnails are not included. You will need to "
+"manually set it."
+msgstr ""
+
+#: api/layout/beans.php:122 api/layout/beans.php:156
+msgid "Option for the Content and Primary Sidebar Layout."
+msgstr ""
+
+#: api/layout/beans.php:132
+msgid "Option for the Content,Primary Sidebar and Secondary Sidebar Layout."
+msgstr ""
+
+#: api/layout/beans.php:117 api/layout/beans.php:151
+msgid "Option for the Full-Width Content Layout."
+msgstr ""
+
+#: api/layout/beans.php:127
+msgid "Option for the Primary Sidebar and Content Layout."
+msgstr ""
+
+#: api/layout/beans.php:142
+msgid "Option for the Primary Sidebar,Content and Secondary Sidebar Layout."
+msgstr ""
+
+#: api/layout/beans.php:137
+msgid "Option for the Primary Sidebar,Secondary Sidebar and Content Layout."
+msgstr ""
+
+#: admin/tab/app/column.php:752
+msgid "Page slug"
+msgstr ""
+
+#: admin/tab/app/column.php:725
+msgid "Page template"
+msgstr ""
+
+#: admin/tab/data/section/column.php:44
+msgid "Pages List Settings"
+msgstr ""
+
+#: admin/beans.php:263
+msgid "Plugin Settings"
+msgstr ""
+
+#: admin/beans.php:467
+msgid "Post Option"
+msgstr ""
+
+#: admin/tab/app/column.php:447
+msgid "Post view"
+msgstr ""
+
+#: admin/tab/data/section/column.php:40
+msgid "Posts List Settings"
+msgstr ""
+
+#: admin/beans.php:278
+msgid "Preview"
+msgstr ""
+
+#: admin/beans.php:621
+msgid "Preview Tools"
+msgstr ""
+
+#: api/layout/beans.php:126
+msgid "Primary Sidebar and Content Layout"
+msgstr ""
+
+#: api/layout/beans.php:141
+msgid "Primary Sidebar,Content and Secondary Sidebar Layout"
+msgstr ""
+
+#: api/layout/beans.php:136
+msgid "Primary Sidebar,Secondary Sidebar and Content Layout"
+msgstr ""
+
+#: admin/tab/data/setting/general/css.php:41
+msgid "Range of Uikit2 components to use"
+msgstr ""
+
+#: api/option/view/form.php:61
+msgid "Reset"
+msgstr ""
+
+#: api/option/view/form.php:60
+msgid "Save"
+msgstr ""
+
+#: api/compiler/control.php:314
+msgid "Scripts are not compiled in development mode."
+msgstr ""
+
+#: admin/tab/data/section/layout.php:45
+msgid "Select layout for archive pages."
+msgstr ""
+
+#: admin/tab/data/section/layout.php:41
+msgid "Select layout for single posts and pages."
+msgstr ""
+
+#: admin/beans.php:342
+msgid "Select to activate development mode."
+msgstr ""
+
+#: api/compiler/config/compiler.php:51
+msgid "Select to compile scripts."
+msgstr ""
+
+#: api/compiler/config/compiler.php:38
+msgid "Select to compile styles."
+msgstr ""
+
+#: api/compiler/runtime.php:1036
+msgid "Send us an automatic report"
+msgstr ""
+
+#: admin/tab/data/section/image.php:49
+msgid "Set avatar image for your comment form."
+msgstr ""
+
+#: admin/tab/data/section/image.php:45
+msgid "Set featured images for your blog categories."
+msgstr ""
+
+#: admin/tab/data/section/image.php:53
+msgid "Set images for your profile and no-posts."
+msgstr ""
+
+#: api/option/view/notice-reset-error.php:33
+msgid "Settings could not be reset,please try again."
+msgstr ""
+
+#: api/option/view/notice-save-error.php:33
+msgid "Settings could not be saved, please try again."
+msgstr ""
+
+#: api/option/view/notice-reset-success.php:33
+msgid "Settings reset successfully!"
+msgstr ""
+
+#: api/option/view/notice-save-success.php:33
+msgid "Settings saved successfully!"
+msgstr ""
+
+#: admin/tab/data/section/layout.php:40
+msgid "Singular pages layout"
+msgstr ""
+
+#: asset/accessibility.php:153
+msgid "Skip to the content."
+msgstr ""
+
+#: asset/accessibility.php:151
+msgid "Skip to the primary navigation."
+msgstr ""
+
+#: asset/accessibility.php:157
+msgid "Skip to the primary sidebar."
+msgstr ""
+
+#: asset/accessibility.php:160
+msgid "Skip to the secondary sidebar."
+msgstr ""
+
+#: admin/beans.php:602
+msgid ""
+"Slide left or right to change the viewport height. Publishing will not "
+"change the height of your website."
+msgstr ""
+
+#: admin/beans.php:591
+msgid ""
+"Slide left or right to change the viewport width. Publishing will not change "
+"the width of your website."
+msgstr ""
+
+#: admin/tab/data/setting/column/page.php:61
+msgid "Slug"
+msgstr ""
+
+#: include/activator.php:92
+msgid ""
+"Sorry, you can't activate this plugin when the <a href=\"https://www."
+"getbeans.io\" target=\"_blank\">Original Beans theme (tm-beans)</a> "
+"framework is installed and a child theme is activated."
+msgstr ""
+
+#: api/field/view/image.php:208
+msgid "Sorry,no description was given for this image."
+msgstr ""
+
+#: api/compiler/config/compiler.php:61
+msgid "Standard"
+msgstr ""
+
+#: admin/tab/backup.php:169
+msgid "Start Importing"
+msgstr ""
+
+#: admin/tab/data/setting/general/api.php:54
+msgid "Stop Beans Customizer API"
+msgstr ""
+
+#: admin/tab/data/setting/general/api.php:40
+msgid "Stop Beans Image API"
+msgstr ""
+
+#: admin/tab/data/setting/general/api.php:47
+msgid "Stop Beans Widget API"
+msgstr ""
+
+#: admin/tab/data/setting/general/path.php:47
+msgid "Structure file path (BEANS_STRUCTURE_PATH)."
+msgstr ""
+
+#: api/compiler/control.php:293
+msgid "Styles are not compiled in development mode."
+msgstr ""
+
+#: admin/tab/data/setting/column/page.php:54
+msgid "Template"
+msgstr ""
+
+#: admin/tab/data/setting/general/path.php:40
+msgid "Template file path (BEANS_TEMPLATES_PATH)."
+msgstr ""
+
+#: api/compiler/runtime.php:1079
+msgid ""
+"Thanks for your contribution by reporting this issue. We hope to hear from "
+"you again."
+msgstr ""
+
+#. Author of the plugin
+msgid "That WP Developer"
+msgstr ""
+
+#: admin/tab/preview.php:80
+msgid "Theme Preview"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#: admin/beans.php:344
+msgid "This option should be enabled while your website is in development."
+msgstr ""
+
+#: admin/tab/app/column.php:390 admin/tab/app/column.php:695
+#: admin/tab/data/setting/column/page.php:47
+#: admin/tab/data/setting/column/post.php:47
+msgid "Thumbnail"
+msgstr ""
+
+#: admin/tab/data/section/general.php:52
+msgid "Uikit Version"
+msgstr ""
+
+#: api/customizer/runtime.php:81 api/option/runtime.php:96
+#: api/post-meta/runtime.php:91
+msgid "Undefined"
+msgstr ""
+
+#: admin/tab/helper/echo.php:154
+msgid "Upload Media"
+msgstr ""
+
+#: admin/tab/data/setting/general/module.php:47
+msgid "Use Beans Accessibility (Skip to link) HTML"
+msgstr ""
+
+#: admin/tab/data/setting/general/module.php:40
+msgid "Use Beans Legacy Layout"
+msgstr ""
+
+#. The (%s) placeholder is for the "Modify" hyperlink.
+#: api/layout/beans.php:544 api/layout/beans.php:553
+#, php-format
+msgid "Use Default Layout (%s)"
+msgstr ""
+
+#: admin/tab/data/setting/general/css.php:48
+msgid "Use Uikit3 via CDN"
+msgstr ""
+
+#: admin/tab/data/section/column.php:48
+msgid "User Profile Settings"
+msgstr ""
+
+#: admin/beans.php:264
+msgid "Version "
+msgstr ""
+
+#: admin/tab/app/column.php:596
+msgid "View counts ："
+msgstr ""
+
+#: admin/beans.php:601
+msgid "Viewport Height - for Previewing Only"
+msgstr ""
+
+#: admin/beans.php:590
+msgid "Viewport Width - for Previewing Only"
+msgstr ""
+
+#: admin/tab/backup.php:161
+msgid ""
+"Warning! Importing new settings will Overwrite your current configuration."
+msgstr ""
+
+#: api/compiler/runtime.php:1037
+msgid ""
+"We respect your time and understand you might not be able to contact us."
+msgstr ""
+
+#: admin/tab/app/column.php:420 admin/tab/data/setting/column/post.php:54
+msgid "Word count"
+msgstr ""
+
+#: admin/tab/data/section/general.php:49
+msgid ""
+"You can configure Beans constants for template files under the directory "
+"path of your theme "
+msgstr ""
+
+#: admin/beans.php:254
+msgid "You do not have sufficient Permissions to access this Admin page."
+msgstr ""
+
+#: api/compiler/runtime.php:1021
+msgid ""
+"Your current install or file permission prevents Beans from working its "
+"magic. Please get in touch with Beans support. We will gladly get you "
+"started within 24 - 48 hours (working days)."
+msgstr ""
