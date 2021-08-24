@@ -105,6 +105,7 @@ ______________________________
 		// The core plugin class that is used to define internationalization,admin-specific hooks,and public-facing site hooks.
 		require_once plugin_dir_path(__FILE__) . 'utility/tag-external.php';
 		require_once plugin_dir_path(__FILE__) . 'utility/tag-internal.php';
+		require_once plugin_dir_path(__FILE__) . 'utility/theme.php';
 		require plugin_dir_path(__FILE__) . 'include/core.php';
 
 		/**

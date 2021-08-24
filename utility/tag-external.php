@@ -1464,22 +1464,3 @@ ______________________________
 		return \Beans_Extension\_beans_component::__remove_support($feature);
 	}// Method
 	endif;
-
-
-	/* Misc
-	_________________________
-	*/
-	if(function_exists('beans_set_post_view') === FALSE) :
-	function beans_set_post_view($post_id)
-	{
-		/**
-		 * @param (int) $post_id
-		 * 	WordPress post id.
-		 * @reference (Beans)
-		 * Custom function of this plugin for updating post view count.
-		 * @reference
-		 * 	[Plugin]/admin/tab/app/column.php
-		*/
-		\Beans_Extension\_beans_admin_column_app::__set_post_view($post_id);
-	}// Method
-	endif;

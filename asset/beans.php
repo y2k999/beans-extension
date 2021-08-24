@@ -138,7 +138,7 @@ class _beans_asset
 			'hook' => 'wp_enqueue_scripts',
 		);
 
-		if(isset($_beans_extension_component_setting['uikit2']) && ($_beans_extension_component_setting['uikit2'] === 'full')){
+		if(isset($_beans_extension_component_setting['general']['uikit2']) && ($_beans_extension_component_setting['general']['uikit2'] === 'full')){
 			unset($return['enqueue_uikit3_cdn']);
 		}
 
@@ -207,7 +207,7 @@ class _beans_asset
 		// Custom global variable.
 		global $_beans_extension_component_setting;
 
-		switch($_beans_extension_component_setting['uikit2']){
+		switch($_beans_extension_component_setting['general']['uikit2']){
 			case 'full' :
 				_beans_uikit::__enqueue_component(array(
 					'base',

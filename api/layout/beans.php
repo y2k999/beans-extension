@@ -109,7 +109,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['legacy_layout']){
+		if($_beans_extension_component_setting['general']['legacy_layout']){
 			$return = array(
 				'c' => array(
 					'src' => BEANS_EXTENSION_API_URL['asset'] . 'image/beans/c.png',
@@ -322,7 +322,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
 			$args = apply_filters('beans_extension_layout_configuration',array(
 				'grid' => 4,
 				'sidebar_primary' => 1,
@@ -384,7 +384,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
 			$prefix = 'uk-width-' . _beans_utility::__get_global_value('breakpoint',$args,'medium');
 			$classes = array(
 				'content' => "{$prefix}-{$c}-{$grid}",
@@ -403,7 +403,7 @@ class _beans_layout
 		 * 	Check whether a widget area is registered.
 		 * 	https://www.getbeans.io/code-reference/functions/beans_has_widget_area/
 		*/
-		if(!$_beans_extension_component_setting['stop_widget']){
+		if(!$_beans_extension_component_setting['general']['stop_widget']){
 			if(!_beans_widget::__has_widget_area('sidebar_primary')){
 				return $classes;
 			}
@@ -413,7 +413,7 @@ class _beans_layout
 		$has_secondary = _beans_widget::__has_widget_area('sidebar_secondary');
 		$c = $has_secondary && strlen(trim($layout)) > 4 ? $grid - ($sp + $ss) : $grid - $sp;
 
-		if($_beans_extension_component_setting['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
 			switch($layout){
 				case 'c_sp' :
 				case 'c_sp_ss' :
@@ -515,7 +515,7 @@ class _beans_layout
 
 		// Check if Beans legacy layout.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['legacy_layout']){
+		if($_beans_extension_component_setting['general']['legacy_layout']){
 
 			// Add sidebar primary layouts if the primary widget area is registered.
 			$layouts['sp_c'] = self::$_image['sp_c'];
@@ -537,7 +537,7 @@ class _beans_layout
 			return $layouts;
 		}
 
-		if($_beans_extension_component_setting['legacy_layout']){
+		if($_beans_extension_component_setting['general']['legacy_layout']){
 			$layouts = array_merge(array(
 				'default_fallback' => sprintf(
 					/* translators: The (%s) placeholder is for the "Modify" hyperlink. */
@@ -585,7 +585,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['legacy_layout']){
+		if($_beans_extension_component_setting['general']['legacy_layout']){
 			if(!in_array($layout,array('c_sp','sp_c','c_sp_ss','sp_c_ss','sp_ss_c'),TRUE)){
 				return FALSE;
 			}
@@ -630,7 +630,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if(!$_beans_extension_component_setting['legacy_layout']){return;}
+		if(!$_beans_extension_component_setting['general']['legacy_layout']){return;}
 
 		if(!in_array($layout,array('c_ss','ss_c','c_sp_ss','sp_c_ss','sp_ss_c'),TRUE)){
 			return FALSE;
@@ -670,7 +670,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if(!$_beans_extension_component_setting['legacy_layout']){return;}
+		if(!$_beans_extension_component_setting['general']['legacy_layout']){return;}
 
 		$layout = self::__get_current();
 		switch ($layout){

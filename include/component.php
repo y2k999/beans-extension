@@ -44,6 +44,7 @@ class _beans_component
  * 	register_support()
  * 	__get_support()
  * 	__remove_support()
+ * 	__get_setting()
 */
 
 	/**
@@ -126,6 +127,11 @@ class _beans_component
 				[Plugin]/admin/tab/general.php
 		*/
 
+		//
+		// General Tab
+		//
+		$option_general = get_option(BEANS_EXTENSION_PREFIX['option'] . 'general');
+
 		/**
 		 * @since 1.0.1
 		 * 	Uikit (CSS framework) version.
@@ -133,85 +139,40 @@ class _beans_component
 		 * 	https://getuikit.com/v2/
 		 * 	https://getuikit.com/
 		*/
-		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'general');
 		$uikit2 = BEANS_EXTENSION_PREFIX['setting'] . 'general_uikit2_component_range';
-		if(isset($option[$uikit2]) && ($option[$uikit2] === 'full')){
-			$return['uikit2'] = 'full';
-		}
-		else{
-			$return['uikit2'] = 'min';
-		}
+		$return['general']['uikit2'] = isset($option_general[$uikit2]) && ($option_general[$uikit2] === 'full') ? 'full' : 'min';
 
 		$uikit3 = BEANS_EXTENSION_PREFIX['setting'] . 'general_use_uikit3_cdn';
-		if(isset($option[$uikit3]) && $option[$uikit3]){
-			$return['uikit3'] = TRUE;
-		}
-		else{
-			$return['uikit3'] = FALSE;
-		}
+		$return['general']['uikit3'] = isset($option_general[$uikit3]) && $option_general[$uikit3] ? TRUE : FALSE;
 
 		/**
 		 * @since 1.0.1
-		 * 	If you want to deactivate some Beans API component.
+		 * 	Stop some Beans API components.
 		 * @reference (Beans)
 		 * 	https://www.getbeans.io/documentation/api/
 		*/
 		$image = BEANS_EXTENSION_PREFIX['setting'] . 'general_stop_beans_image';
-		if(isset($option[$image]) && $option[$image]){
-			// stop beans_image
-			$return['stop_image'] = TRUE;
-		}
-		else{
-			$return['stop_image'] = FALSE;
-		}
+		$return['general']['stop_image'] = isset($option_general[$image]) && $option_general[$image] ? TRUE : FALSE;
 
 		$widget = BEANS_EXTENSION_PREFIX['setting'] . 'general_stop_beans_widget';
-		if(isset($option[$widget]) && $option[$widget]){
-			// stop beans_widget
-			$return['stop_widget'] = TRUE;
-		}
-		else{
-			$return['stop_widget'] = FALSE;
-		}
+		$return['general']['stop_widget'] = isset($option_general[$widget]) && $option_general[$widget] ? TRUE : FALSE;
 
 		$customizer = BEANS_EXTENSION_PREFIX['setting'] . 'general_stop_beans_customizer';
-		if(isset($option[$customizer]) && $option[$customizer]){
-			// stop beans_customizer
-			$return['stop_customizer'] = TRUE;
-		}
-		else{
-			$return['stop_customizer'] = FALSE;
-		}
+		$return['general']['stop_customizer'] = isset($option_general[$customizer]) && $option_general[$customizer] ? TRUE : FALSE;
 
 		/**
 		 * @since 1.0.1
-		 * 	Beans page layout options.
+		 * 	Use Beans legacy (relevant to Uikit2).
 		 * @reference (Beans)
 		 * 	https://www.getbeans.io/documentation/layout/
-		*/
-		$layout = BEANS_EXTENSION_PREFIX['setting'] . 'general_beans_legacy_layout';
-		if(isset($option[$layout]) && $option[$layout]){
-			// legacy Benas layout
-			$return['legacy_layout'] = TRUE;
-		}
-		else{
-			// Beans Extension original layout
-			$return['legacy_layout'] = FALSE;
-		}
-
-		/**
-		 * @since 1.0.1
-		 * 	Beans accessibility (skip to link) function.
 		 * @reference
 		 * 	[Plugin]/asset/accessibility.php
 		*/
+		$layout = BEANS_EXTENSION_PREFIX['setting'] . 'general_beans_legacy_layout';
+		$return['general']['legacy_layout'] = isset($option_general[$layout]) && $option_general[$layout] ? TRUE : FALSE;
+
 		$accessibility = BEANS_EXTENSION_PREFIX['setting'] . 'general_beans_accessibility';
-		if(isset($option[$accessibility]) && $option[$accessibility]){
-			$return['accessibility'] = TRUE;
-		}
-		else{
-			$return['accessibility'] = FALSE;
-		}
+		$return['general']['accessibility'] = isset($option_general[$accessibility]) && $option_general[$accessibility] ? TRUE : FALSE;
 
 		/**
 		 * @since 1.0.1
@@ -221,19 +182,64 @@ class _beans_component
 		 * 	https://www.getbeans.io/code-reference/fragments/
 		*/
 		$template = BEANS_EXTENSION_PREFIX['setting'] . 'general_theme_template_path';
-		if(isset($option[$template])){
-			$return['template'] = $option[$template];
-		}
+		$return['general']['template'] = isset($option_general[$template]) ? $option_general[$template] : 'lib/templates/';
 
 		$structure = BEANS_EXTENSION_PREFIX['setting'] . 'general_theme_structure_path';
-		if(isset($option[$structure])){
-			$return['structure'] = $option[$structure];
-		}
+		$return['general']['structure'] = isset($option_general[$structure]) ? $option_general[$structure] : 'lib/templates/structure/';
 
 		$fragment = BEANS_EXTENSION_PREFIX['setting'] . 'general_theme_fragment_path';
-		if(isset($option[$fragment])){
-			$return['fragment'] = $option[$fragment];
-		}
+		$return['general']['fragment'] = isset($option_general[$fragment]) ? $option_general[$fragment] : 'lib/templates/fragments/';
+
+		//
+		// Image Tab
+		//
+		$option_image = get_option(BEANS_EXTENSION_PREFIX['option'] . 'image');
+
+		/**
+		 * @since 1.0.1
+		 * 	Uploaded images.
+		*/
+		$profile = BEANS_EXTENSION_PREFIX['setting'] . 'image_profile';
+		$return['image']['profile'] = isset($option_image[$profile]) ? $option_image[$profile] : '';
+
+		$nopost = BEANS_EXTENSION_PREFIX['setting'] . 'image_nopost';
+		$return['image']['nopost'] = isset($option_image[$nopost]) ? $option_image[$nopost] : '';
+
+
+		//
+		// Layout Tab
+		//
+		$option_layout = get_option(BEANS_EXTENSION_PREFIX['option'] . 'layout');
+
+		/**
+		 * @since 1.0.1
+		 * 	Display layout options on meta pages.
+		*/
+		$post_meta = BEANS_EXTENSION_PREFIX['setting'] . 'layout_post_meta';
+		$return['layout']['post_meta'] = isset($option_layout[$post_meta]) && $option_layout[$post_meta] ? TRUE : FALSE;
+
+		$term_meta = BEANS_EXTENSION_PREFIX['setting'] . 'layout_term_meta';
+		$return['layout']['term_meta'] = isset($option_layout[$term_meta]) && $option_layout[$term_meta] ? TRUE : FALSE;
+
+		/**
+		 * @since 1.0.1
+		 * 	Single posts/pages layout.
+		*/
+		$single = BEANS_EXTENSION_PREFIX['setting'] . 'layout_single';
+		$return['layout']['single'] = isset($option_layout[$single]) && ($option_layout[$single] === 'c') ? 'c' : 'c_sp';
+
+		$page = BEANS_EXTENSION_PREFIX['setting'] . 'layout_page';
+		$return['layout']['page'] = isset($option_layout[$page]) && ($option_layout[$page] === 'c') ? 'c' : 'c_sp';
+
+		/**
+		 * @since 1.0.1
+		 * 	Archive list layout.
+		*/
+		$home = BEANS_EXTENSION_PREFIX['setting'] . 'layout_home';
+		$return['layout']['home'] = isset($option_layout[$home]) && ($option_layout[$home] === 'list') ? 'list' : 'card';
+
+		$archive = BEANS_EXTENSION_PREFIX['setting'] . 'layout_archive';
+		$return['layout']['archive'] = isset($option_layout[$archive]) && ($option_layout[$archive] === 'list') ? 'list' : 'card';
 
 		return $return;
 
@@ -277,17 +283,17 @@ class _beans_component
 		global $_beans_extension_component_setting;
 
 		// Check if Beans image component is inactive.
-		if(isset($_beans_extension_component_setting['stop_image']) && ($_beans_extension_component_setting['stop_image'])){
+		if(isset($_beans_extension_component_setting['general']['stop_image']) && ($_beans_extension_component_setting['general']['stop_image'])){
 			unset($return['image']);
 		}
 
 		// Check if Beans widget component is inactive.
-		if(isset($_beans_extension_component_setting['stop_widget']) && ($_beans_extension_component_setting['stop_widget'])){
+		if(isset($_beans_extension_component_setting['general']['stop_widget']) && ($_beans_extension_component_setting['general']['stop_widget'])){
 			unset($return['widget']);
 		}
 
 		// Check if Beans widget component is inactive.
-		if(isset($_beans_extension_component_setting['stop_customizer']) && ($_beans_extension_component_setting['stop_customizer'])){
+		if(isset($_beans_extension_component_setting['general']['stop_customizer']) && ($_beans_extension_component_setting['general']['stop_customizer'])){
 			unset($return['customizer']);
 		}
 
@@ -357,22 +363,22 @@ class _beans_component
 		global $_beans_extension_component_setting;
 
 		// Check if Beans image component is inactive.
-		if(isset($_beans_extension_component_setting['stop_image']) && ($_beans_extension_component_setting['stop_image'])){
+		if(isset($_beans_extension_component_setting['general']['stop_image']) && ($_beans_extension_component_setting['general']['stop_image'])){
 			unset($return['image']);
 		}
 
 		// Check if Beans widget component is inactive.
-		if(isset($_beans_extension_component_setting['stop_widget']) && ($_beans_extension_component_setting['stop_widget'])){
+		if(isset($_beans_extension_component_setting['general']['stop_widget']) && ($_beans_extension_component_setting['general']['stop_widget'])){
 			unset($return['widget']);
 		}
 
 		// Check if Beans customizer component is inactive.
-		if(isset($_beans_extension_component_setting['stop_customizer']) && ($_beans_extension_component_setting['stop_customizer'])){
+		if(isset($_beans_extension_component_setting['general']['stop_customizer']) && ($_beans_extension_component_setting['general']['stop_customizer'])){
 			unset($return['customizer']);
 		}
 
 		// Check if Beans accessibility component is inactive.
-		if(isset($_beans_extension_component_setting['accessibility']) && ($_beans_extension_component_setting['accessibility'])){
+		if(isset($_beans_extension_component_setting['general']['accessibility']) && ($_beans_extension_component_setting['general']['accessibility'])){
 			$return['asset'][] = BEANS_EXTENSION_API_PATH['asset'] . 'accessibility.php';
 		}
 
@@ -422,7 +428,7 @@ class _beans_component
 		global $_beans_extension_component_setting;
 
 		// Check if Beans image component is inactive.
-		if(isset($_beans_extension_component_setting['stop_image']) && ($_beans_extension_component_setting['stop_image'])){
+		if(isset($_beans_extension_component_setting['general']['stop_image']) && ($_beans_extension_component_setting['general']['stop_image'])){
 			unset($return['image']);
 		}
 		return $return;
@@ -486,12 +492,12 @@ class _beans_component
 		global $_beans_extension_component_setting;
 
 		// Check if Beans image component is inactive.
-		if(isset($_beans_extension_component_setting['stop_image']) && ($_beans_extension_component_setting['stop_image'])){
+		if(isset($_beans_extension_component_setting['general']['stop_image']) && ($_beans_extension_component_setting['general']['stop_image'])){
 			unset($return['image']);
 		}
 
 		// Check if Beans image component is inactive.
-		if(isset($_beans_extension_component_setting['stop_customizer']) && ($_beans_extension_component_setting['stop_customizer'])){
+		if(isset($_beans_extension_component_setting['general']['stop_customizer']) && ($_beans_extension_component_setting['general']['stop_customizer'])){
 			unset($return['customizer']);
 		}
 
@@ -686,6 +692,58 @@ class _beans_component
 		global $_beans_extension_component_support;
 		unset($_beans_extension_component_support[$feature]);
 		return TRUE;
+
+	}// Method
+
+
+	/* Method
+	_________________________
+	*/
+	public static function __get_setting($group = '',$needle = '')
+	{
+		/**
+			@access (public)
+				Returns the registerd settings.
+			@param (string) $group
+				Accepts 
+				 - general
+				 - image
+				 - layout
+			@param (string) $needle
+				Name of setting.
+			@return (mixed)|(array)
+		*/
+		if(!isset($group)){return;}
+
+		// Custom global.
+		global $_beans_extension_component_setting;
+
+		switch($group){
+			case 'general' :
+				if(isset($needle) && array_key_exists($needle,$_beans_extension_component_setting['general'])){
+					return $_beans_extension_component_setting['general'][$needle];
+				}
+				else{
+					return $_beans_extension_component_setting['general'];
+				}
+				break;
+			case 'image' :
+				if(isset($needle) && array_key_exists($needle,$_beans_extension_component_setting['image'])){
+					return $_beans_extension_component_setting['image'][$needle];
+				}
+				else{
+					return $_beans_extension_component_setting['image'];
+				}
+				break;
+			case 'layout' :
+				if(isset($needle) && array_key_exists($needle,$_beans_extension_component_setting['layout'])){
+					return $_beans_extension_component_setting['layout'][$needle];
+				}
+				else{
+					return $_beans_extension_component_setting['layout'];
+				}
+				break;
+		}
 
 	}// Method
 

@@ -385,14 +385,17 @@ final class _beans_admin
 				This provides for backward compatibility with legacy Beans settings.
 					wp-admin/term.php?taxonomy=category
 					wp-admin/term.php?taxonomy=post_tag
+			@global (array) $_beans_extension_component_setting
+				API components setting global.
 			@return (void)
 			@reference
 				[Plugin]/api/layout/beans.php
 				[Plugin]/api/term-meta/beans.php
 		*/
-		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'layout');
-		$term_meta = BEANS_EXTENSION_PREFIX['setting'] . 'layout_term_meta';
-		if(!isset($option[$term_meta]) || (isset($option[$term_meta]) && !$option[$term_meta])){return;}
+		// Custom global variable.
+		global $_beans_extension_component_setting;
+
+		if(!isset($_beans_extension_component_setting['layout']['term_meta']) || (isset($_beans_extension_component_setting['layout']['term_meta']) && !$_beans_extension_component_setting['layout']['term_meta'])){return;}
 
 		/**
 		 * @reference (Beans)
@@ -437,14 +440,17 @@ final class _beans_admin
 				Add Beans layout option to WP post editor.
 				This provides for backward compatibility with legacy Beans settings.
 					wp-admin/post.php
+			@global (array) $_beans_extension_component_setting
+				API components setting global.
 			@return (void)
 			@reference
 				[Plugin]/api/layout/beans.php
 				[Plugin]/api/post-meta/beans.php
 		*/
-		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'layout');
-		$post_meta = BEANS_EXTENSION_PREFIX['setting'] . 'layout_post_meta';
-		if(!isset($option[$post_meta]) || (isset($option[$post_meta]) && !$option[$post_meta])){return;}
+		// Custom global variable.
+		global $_beans_extension_component_setting;
+
+		if(!isset($_beans_extension_component_setting['layout']['post_meta']) || (isset($_beans_extension_component_setting['layout']['post_meta']) && !$_beans_extension_component_setting['layout']['post_meta'])){return;}
 
 		/**
 		 * @reference (Beans)
@@ -510,7 +516,7 @@ final class _beans_admin
 		global $_beans_extension_component_setting;
 
 		// Check if Beans customizer component is inactive.
-		if(isset($_beans_extension_component_setting['stop_customizer']) && ($_beans_extension_component_setting['stop_customizer'])){return;}
+		if(isset($_beans_extension_component_setting['general']['stop_customizer']) && ($_beans_extension_component_setting['general']['stop_customizer'])){return;}
 
 		$field = array(
 			array(
