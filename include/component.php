@@ -233,7 +233,7 @@ class _beans_component
 		 * 	Archive list layout.
 		*/
 		$home = BEANS_EXTENSION_PREFIX['setting'] . 'layout_home';
-		$return['layout']['home'] = isset($option_layout[$home]) && ($option_layout[$home] === 'list') ? 'list' : 'card';
+		$return['layout']['home'] = isset($option_layout[$home]) && ($option_layout[$home] === 'card') ? 'card' : 'list';
 
 		$archive = BEANS_EXTENSION_PREFIX['setting'] . 'layout_archive';
 		$return['layout']['archive'] = isset($option_layout[$archive]) && ($option_layout[$archive] === 'list') ? 'list' : 'card';
