@@ -322,7 +322,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit'] === 'uikit2'){
 			$args = apply_filters('beans_extension_layout_configuration',array(
 				'grid' => 4,
 				'sidebar_primary' => 1,
@@ -384,7 +384,7 @@ class _beans_layout
 
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit'] === 'uikit2'){
 			$prefix = 'uk-width-' . _beans_utility::__get_global_value('breakpoint',$args,'medium');
 			$classes = array(
 				'content' => "{$prefix}-{$c}-{$grid}",
@@ -413,7 +413,7 @@ class _beans_layout
 		$has_secondary = _beans_widget::__has_widget_area('sidebar_secondary');
 		$c = $has_secondary && strlen(trim($layout)) > 4 ? $grid - ($sp + $ss) : $grid - $sp;
 
-		if($_beans_extension_component_setting['general']['uikit2'] === 'full'){
+		if($_beans_extension_component_setting['general']['uikit'] === 'uikit2'){
 			switch($layout){
 				case 'c_sp' :
 				case 'c_sp_ss' :

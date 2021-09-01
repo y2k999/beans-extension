@@ -50,7 +50,7 @@ ______________________________
 			),
 			'css' => array(
 				'title' => esc_html__('Uikit Version','beans-extension'),
-				'description' => __('If you want to use Uikit3, select "<strong>Load only normalize.css</strong>" option and check "<strong>Uikit3 CDN</strong>".','beans-extension'),
+				'description' => __('If you want to use the latest version, select "<strong>Uikit3</strong>" option.','beans-extension'),
 			),
 		);
 

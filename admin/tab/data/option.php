@@ -87,10 +87,9 @@ class _beans_admin_option_data
 				[Plugin]/admin/tab/general.php
 		*/
 		return array(
-			// 'css_framework' => array(
-			'uikit2_component_range' => array(
-				'full' => 'Load all Uikit2 components',
-				'min' => 'Load only normalize.css',
+			'uikit_version' => array(
+				'uikit3' => 'Latest Uikit3 (via CDN)',
+				'uikit2' => 'Legacy Uikit2 (LESS files)',
 			),
 		);
 

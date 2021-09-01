@@ -139,11 +139,8 @@ class _beans_component
 		 * 	https://getuikit.com/v2/
 		 * 	https://getuikit.com/
 		*/
-		$uikit2 = BEANS_EXTENSION_PREFIX['setting'] . 'general_uikit2_component_range';
-		$return['general']['uikit2'] = isset($option_general[$uikit2]) && ($option_general[$uikit2] === 'full') ? 'full' : 'min';
-
-		$uikit3 = BEANS_EXTENSION_PREFIX['setting'] . 'general_use_uikit3_cdn';
-		$return['general']['uikit3'] = isset($option_general[$uikit3]) && $option_general[$uikit3] ? TRUE : FALSE;
+		$uikit = BEANS_EXTENSION_PREFIX['setting'] . 'general_uikit_version';
+		$return['general']['uikit'] = isset($option_general[$uikit]) && ($option_general[$uikit] === 'uikit2') ? 'uikit2' : 'uikit3';
 
 		/**
 		 * @since 1.0.1

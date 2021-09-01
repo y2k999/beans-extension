@@ -315,15 +315,15 @@ final class _beans_runtime_uikit
 	{
 		// Custom global variable.
 		global $_beans_extension_component_setting;
-		switch($_beans_extension_component_setting['general']['uikit2']){
-			case 'full' :
+		switch($_beans_extension_component_setting['general']['uikit']){
+			case 'uikit2' :
 				$components = apply_filters('beans_extension_registered_js_component',array(
 					'core',
 					'utility',
 					'touch'
 				));
 				break;
-			case 'min' :
+			case 'uikit3' :
 			default :
 				$components = apply_filters('beans_extension_registered_js_component',array(
 					// 'alert'

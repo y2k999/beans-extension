@@ -29,8 +29,8 @@ ______________________________
 // Custom global variable.
 global $_beans_extension_component_setting;
 
-switch($_beans_extension_component_setting['uikit2']){
-	case 'full' :
+switch($_beans_extension_component_setting['uikit']){
+	case 'uikit2' :
 		return array(
 			'cover' => array(
 				'core' => array(
@@ -118,7 +118,7 @@ switch($_beans_extension_component_setting['uikit2']){
 		);
 		break;
 
-	case 'min' :
+	case 'uikit3' :
 	default :
 		return array();
 		break;

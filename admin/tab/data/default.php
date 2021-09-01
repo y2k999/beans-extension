@@ -122,9 +122,7 @@ class _beans_admin_default_data
 				'theme_fragment_path' => 'lib/templates/fragments/',
 			),
 			'css' => array(
-				// 'css_framework' => 'min',
-				'uikit2_component_range' => 'min',
-				'use_uikit3_cdn' => 1,
+				'uikit_version' => 'uikit3',
 			),
 		);
 

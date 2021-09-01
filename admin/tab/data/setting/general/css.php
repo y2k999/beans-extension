@@ -36,18 +36,10 @@ ______________________________
 	function __beans_admin_css_general_setting()
 	{
 		return array(
-			// 'css_framework' => array(
-			'uikit2_component_range' => array(
-				'label' => esc_html__('Range of Uikit2 Components to use','beans-extension'),
+			'uikit_version' => array(
+				'label' => esc_html__('Select Uikit Version','beans-extension'),
 				'type' => 'select',
-				'default' => 0,
-				'group' => 'general',
-				'section' => 'css',
-			),
-			'use_uikit3_cdn' => array(
-				'label' => esc_html__('Use Uikit3 via CDN','beans-extension'),
-				'type' => 'boolean',
-				'default' => 1,
+				'default' => 'uikit3',
 				'group' => 'general',
 				'section' => 'css',
 			),

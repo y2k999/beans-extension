@@ -116,10 +116,12 @@ class _beans_asset
 				[Plugin]/include/component.php
 				[Plugin]/admin/tab/general.php
 		*/
+/*
 		$return['reset_jquery'] = array(
 			'tag' => 'add_action',
 			'hook' => 'wp_enqueue_scripts',
 		);
+*/
 		$return['admin_enqueue_scripts'] = array(
 			'tag' => 'add_action',
 			'hook' => 'admin_enqueue_scripts',
@@ -138,7 +140,7 @@ class _beans_asset
 			'hook' => 'wp_enqueue_scripts',
 		);
 
-		if(isset($_beans_extension_component_setting['general']['uikit2']) && ($_beans_extension_component_setting['general']['uikit2'] === 'full')){
+		if(isset($_beans_extension_component_setting['general']['uikit']) && ($_beans_extension_component_setting['general']['uikit'] === 'uikit2')){
 			unset($return['enqueue_uikit3_cdn']);
 		}
 
@@ -207,8 +209,8 @@ class _beans_asset
 		// Custom global variable.
 		global $_beans_extension_component_setting;
 
-		switch($_beans_extension_component_setting['general']['uikit2']){
-			case 'full' :
+		switch($_beans_extension_component_setting['general']['uikit']){
+			case 'uikit2' :
 				_beans_uikit::__enqueue_component(array(
 					'base',
 					'block',
@@ -238,7 +240,7 @@ class _beans_asset
 				),'core',FALSE);
 				break;
 
-			case 'min' :
+			case 'uikit3' :
 			default :
 				/**
 				 * @since 1.0.1
