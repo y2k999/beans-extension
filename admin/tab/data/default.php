@@ -185,11 +185,13 @@ class _beans_admin_default_data
 				'num_of_categories' => 5,
 			),
 			'eyecatch' => array(
+/*
 				0 => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
 				1 => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
 				2 => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
 				3 => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
 				4 => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
+*/
 			),
 			'picture' => array(
 				'profile' => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',

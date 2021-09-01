@@ -54,9 +54,8 @@ ______________________________
 
 		if(!empty($categories)){
 			foreach($categories as $category){
-				// $return[$category->category_nicename] = array(
-				$return[] = array(
-					'label' => esc_html($category->cat_name),
+				$return[$category->category_nicename] = array(
+					'label' => $category->cat_name,
 					'type' => 'image',
 					'default' => BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg',
 					'group' => 'image',

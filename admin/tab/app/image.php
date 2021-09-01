@@ -137,6 +137,9 @@ class _beans_admin_image_app
 			@return (array)
 				List of category objects.
 		*/
+		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'image');
+		$max = BEANS_EXTENSION_PREFIX['setting'] . 'image_num_of_categories';
+		$number = isset($option[$max]) ? $option[$max] : 5;
 
 		/**
 		 * @reference (WP)
@@ -145,15 +148,18 @@ class _beans_admin_image_app
 		*/
 		$terms = get_categories(array(
 			'exclude' => 1,
-			'orderby' => 'id',
-			'hide_empty'	 => 0,
+			'orderby' => 'count',
+			'order' => 'desc',
+			'hide_empty' => 1,
+			'number' => $number,
 		));
 
 		$return = array();
 
 		if(!empty($terms)){
 			foreach($terms as $term){
-				$return[] = $term->category_nicename;
+				$key = BEANS_EXTENSION_PREFIX['setting'] . 'image_' . $term->category_nicename;
+				$return[$term->category_nicename] = $option[$key];
 			}
 		}
 		return $return;
@@ -215,20 +221,7 @@ class _beans_admin_image_app
 		*/
 		if(wp_is_post_revision($post_id)){return;}
 
-		/**
-		 * @since 1.0.1
-		 * 	Check the eyecatch.
-		 * @reference (WP)
-		 * 	Retrieves a post meta field for the given post ID.
-		 * 	https://developer.wordpress.org/reference/functions/get_post_meta/
-		*/
-		$attachment_id = get_post_meta($post_id,'_thumbnail_id',TRUE);
-		if($attachment_id){return;}
-
-		// Check "Image" tab settings.
 		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'image');
-		if(empty($option)){return;}
-
 		/**
 		 * @reference (WP)
 		 * 	Retrieves post categories.
@@ -236,25 +229,21 @@ class _beans_admin_image_app
 		*/
 		$categories = get_the_category($post_id);
 		if(!empty($categories)){
-			foreach($categories as $category){
-				foreach($this->category as $key => $value){
-					$needle = BEANS_EXTENSION_PREFIX['setting'] . 'image_' . $key;
-					if(isset($option[$needle])){
-						$media_id = $this->get_attachment_id_by_guid($option[$needle]);
-						/**
-						 * @reference (WP)
-						 * 	Updates a post meta field based on the given post ID.
-						 * 	https://developer.wordpress.org/reference/functions/update_post_meta/
-						*/
-						update_post_meta($post_id,$meta_key = '_thumbnail_id',$meta_value = $media_id);
-					}
-					else{
-						$needle = BEANS_EXTENSION_PREFIX['setting'] . 'image_nopost';
-						$media_id = $this->get_attachment_id_by_guid($option[$needle]);
-						update_post_meta($post_id,$meta_key = '_thumbnail_id',$meta_value = $media_id);
-					}
-				}
+			if(array_key_exists($categories[0]->category_nicename,$this->category)){
+				$key = $categories[0]->category_nicename;
+				$media_id = $this->get_attachment_id_by_guid($this->category[$key]);
 			}
+			else{
+				$nopost = BEANS_EXTENSION_PREFIX['setting'] . 'image_nopost';
+				$value = $option[$nopost] ? $option[$nopost] : BEANS_EXTENSION_API_URL['asset'] . 'image/misc/nopost.jpg';
+				$media_id = $this->get_attachment_id_by_guid($value);
+			}
+			/**
+			 * @reference (WP)
+			 * 	Updates a post meta field based on the given post ID.
+			 * 	https://developer.wordpress.org/reference/functions/update_post_meta/
+			*/
+			update_post_meta($post_id,$meta_key = '_thumbnail_id',$meta_value = $media_id);
 		}
 
 	}// Method
@@ -364,14 +353,14 @@ class _beans_admin_image_app
 		@return (int)
 			Attachment post ID, 0 on failure.
 	*/
-	private function get_attachment_id_by_guid($guid)
+	private function get_attachment_id_by_guid($url)
 	{
 		// WP global.
 		global $wpdb;
 
 		$attachment_id = $wpdb->get_var($wpdb->prepare(
 			"SELECT ID FROM $wpdb->posts WHERE post_type='attachment' AND guid=%s LIMIT 1;",
-			$guid
+			$url
 		));
 		return (int)$attachment_id;
 
@@ -401,7 +390,7 @@ class _beans_admin_image_app
 		$attachment_id = 0;
 
 		// If it is a relative URL, convert it to an absolute URL.
-		$parse_url = parse_url( $url );
+		$parse_url = parse_url($url);
 		if(!isset($parse_url['host'])){
 			if(isset($_SERVER['SERVER_NAME'])){
 				/**
