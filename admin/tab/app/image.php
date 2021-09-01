@@ -221,6 +221,16 @@ class _beans_admin_image_app
 		*/
 		if(wp_is_post_revision($post_id)){return;}
 
+		/**
+		 * @since 1.0.1
+		 * 	Check the eyecatch.
+		 * @reference (WP)
+		 * 	Retrieves a post meta field for the given post ID.
+		 * 	https://developer.wordpress.org/reference/functions/get_post_meta/
+		*/
+		$attachment_id = get_post_meta($post_id,'_thumbnail_id',TRUE);
+		if($attachment_id){return;}
+
 		$option = get_option(BEANS_EXTENSION_PREFIX['option'] . 'image');
 		/**
 		 * @reference (WP)
