@@ -50,6 +50,7 @@ class _beans_admin_column_app
  * 	metabox_pv_post()
  * 	orderby_pv_post()
  * 	sortable_pv_post()
+ * 	column_width_post()
  * 	add_id_page()
  * 	add_thumbnail_page()
  * 	add_template_page()
@@ -135,7 +136,7 @@ class _beans_admin_column_app
 				'priority' => 10,
 				'args' => 4
 			),
-			// Add new columns
+			// Add new columns (post)
 			'add_id_post' => array(
 				'tag' => 'add_filter',
 				'hook' => 'manage_posts_columns'
@@ -160,7 +161,12 @@ class _beans_admin_column_app
 				'tag' => 'add_filter',
 				'hook' => 'manage_edit-post_sortable_columns'
 			),
-			// View new columns
+			// Adjust columns width (post)
+			'column_width_post' => array(
+				'tag' => 'add_action',
+				'hook' => 'admin_head'
+			),
+			// View new columns (post)
 			'render_id_post' => array(
 				'tag' => 'add_action',
 				'hook' => 'manage_posts_custom_column',
@@ -189,7 +195,7 @@ class _beans_admin_column_app
 			 * @since 1.0.1
 			 * 	Page Column
 			*/
-			// Add new columns
+			// Add new columns (page)
 			'add_id_page' => array(
 				'tag' => 'add_filter',
 				'hook' => 'manage_pages_columns'
@@ -206,7 +212,7 @@ class _beans_admin_column_app
 				'tag' => 'add_filter',
 				'hook' => 'manage_pages_columns'
 			),
-			// View new columns
+			// View new columns (page)
 			'render_id_page' => array(
 				'tag' => 'add_action',
 				'hook' => 'manage_pages_custom_column',
@@ -638,6 +644,43 @@ class _beans_admin_column_app
 		$sortable_column['post_views_count'] = 'post_views_count';
 		return $sortable_column;
 
+	}// Method
+
+
+	/* Hook
+	_________________________
+	*/
+	public function column_width_post()
+	{
+		/**
+			@access (public)
+				Adjust columns width.
+			@return (void)
+		*/
+		?>
+		<style type="text/css">
+			table.posts th.column-title{
+				text-align: left;
+				width: 250px;
+				overflow: hidden;
+			}
+			table.posts th.column-author{
+				text-align: left;
+				width: 80px;
+				overflow: hidden;
+			}
+			table.posts th.column-categories{
+				text-align: left;
+				width: 80px;
+				overflow: hidden;
+			}
+			table.posts th.column-tags{
+				text-align: left;
+				width: 80px;
+				overflow: hidden;
+			}
+		</style>
+		<?php
 	}// Method
 
 

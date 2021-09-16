@@ -99,10 +99,10 @@ trait _trait_singleton
 	/* Method
 	_________________________
 	*/
-	final private function __clone()
+	protected function __clone()
 	{
 		/**
-			@access (private)
+			@access (protected)
 				Prevent the instance from being cloned
 			@return (void)
 		*/
@@ -114,10 +114,10 @@ trait _trait_singleton
 	/* Method
 	_________________________
 	*/
-	final private function __wakeup()
+	public function __wakeup()
 	{
 		/**
-			@access (private)
+			@access (public)
 				Prevent from being unserialized 
 			@return (void)
 		*/
